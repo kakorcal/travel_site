@@ -6,3 +6,5 @@
 • removing from staging area: git reset PATH_TO_FILE
 
 • create new branch: git branch NEW_BRANCH_NAME
+
+• goto a branch: git checkout BRANCH_NAME
