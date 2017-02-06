@@ -1,0 +1,57 @@
+.row {
+  @mixin clearfix;
+  
+  /*
+    counter act the padding.
+    this makes the row 65px wider
+    the row div is protruding the wrapper div on the right
+   */
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  /*
+    gutters for column layout
+   */
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  /*
+    example for getting with of __4
+    100 / 12 = 8.3333.. * 4 = 33.33
+   */
+  
+  @mixin atMedium {
+    &__b-margin-until-medium {
+      margin-bottom: 1rem;
+    }
+
+    &__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
+    
+    /*
+      its okay if you need to get specific
+      we what it to look like a designer created the page and not a programmer
+     */
+    &__medium-4--larger {
+      width: 37%;
+    }
+
+    &__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    &__medium-8--smaller {
+      width: 63%;
+    }
+  }
+
+}

@@ -1,0 +1,7 @@
+• master branch:
+  the primary, main, live, production version of product
+
+• should create a new branch for each new feature
+
+• removing from staging area: git reset PATH_TO_FILE
+

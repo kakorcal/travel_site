@@ -1,0 +1,64 @@
+• Mobile-first design?
+Mobile view of css design should be the base and should build on top of that. Move in smartphone -> tablet -> desktop direction. If we built from desktop first, it will slow down the website / use unnecessary data for mobile
+  • CSS best practices:
+
+• Mixins:
+Media queries: atSmallest -> atSmall -> atMedium -> atLarge
+
+• Responsive Image: 
+A way to send different image files depending on the screen size
+  Two reasons to use responsive images:
+  1. Art & cropping situation (have small, medium, and large images)
+    - in this case use the picture element with nested source elements
+
+  2. Image res & file size situation (faster loading - not cropped but width and height different proportionally)
+    - in this case just use the srcset prop in the img element
+
+• Testing responsive images:
+• Adding -i to image name: -i is 'information', meaning the image will have a overlay with px dimensions so you will know that the images are changing when testing screens
+• Testing hi dpi version of image: inspect google chrome, toggle devices, set to responsive, click three dots, show device px ratio, change DPR to higher pixel density
+
+• What is rem?
+1rem = font size of html element (usually defaults to 16px)
+This is a good way to scale with users font-size preferences
+If the design has to be 30px, then just divid by 16px to get the rem value
+
+• What is em?
+1em = font size relative to its parent (avoid to prevent unexpected cascading)
+
+• display: inline-block
+This will let the parent and surrounding elements be aware of the elements vertical padding if it was originally inline
+Some resources:
+http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
+https://hacks.mozilla.org/2015/03/understanding-inline-box-model/
+
+• How browsers identify images:
+By default, image are considered as inline level elements (that means it treats the image as a line of text). So that means it leaves a bit of space in the bottom of the image because letters like g and y need a bit of space below. To resolve that, set image as display block (treat the image as a div)
+
+• Always ask if a style is an occurring pattern or specific to one place
+
+• Define margin of text elements with em so that it is relative to the font size of the element. So it will scale according to its font size
+
+• Its ok to have a bunch of modifiers cause if you don't it gets harder to name things later down the road to keep things unique
+
+• When floating elements, it takes it out of the normal flow of the page. The parent container will not be able to know how tall its floated child should be (so it considers it as an empty div).
+
+• How true width is calculated by browsers by default:
+True width = declared width + padding + border
+
+• true width with border-box
+True width = declared width
+
+• hi-dpi gets rendered problem
+The reason is because web browsers assume that all responsive images need to take up the entire browser window width. So its going to try to get the largest image choice in srcset. So we need to tell the browser if that is not ideal by adding the sizes property on the source element
+
+• sizes property on source element
+tells browser the max width that the image will ever display in.
+
+• Purpose of BEM
+- prevent cascading to have side effect
+- inheritance & override hard to debug
+- specificity
+
+• Use BEM for styles specific to site
+• Don't use BEM for generic styles

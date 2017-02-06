@@ -1,0 +1,24 @@
+.generic-content-container {
+  /*
+    line height doesn't need unit of measurement
+    font size for p tag is defaulted to 1rem
+   */
+  /*
+    try not to nest more than one layer deep
+   */
+  p {
+    line-height: 1.65;
+    margin: 1.8rem 0;
+
+    @mixin atSmall {
+      font-size: 1.125rem;
+    }
+  }
+
+  /*
+    default font weight is 400
+   */
+  p a {
+    font-weight: 700;
+  }
+}
