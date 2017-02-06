@@ -8,3 +8,5 @@
 • create new branch: git branch NEW_BRANCH_NAME
 
 • goto a branch: git checkout BRANCH_NAME
+
+• merge a branch: git merge BRANCH_NAME
