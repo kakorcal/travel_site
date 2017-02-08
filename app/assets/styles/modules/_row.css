@@ -10,6 +10,15 @@
     margin-right: -65px;
   }
 
+  &--gutters-large {
+    margin-right: -100px;
+  }
+
+
+  &--gutters-large > div {
+    padding-right: 100px;
+  }
+
   /*
     gutters for column layout
    */
@@ -42,6 +51,11 @@
      */
     &__medium-4--larger {
       width: 37%;
+    }
+
+    &__medium-6 {
+      float: left;
+      width: 50%;
     }
 
     &__medium-8 {
