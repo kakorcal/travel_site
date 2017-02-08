@@ -12,6 +12,20 @@ gulp.task('watch', function() {
       baseDir: 'app'
     }
   });
+  
+  //***************************************************************************
+  // if you want to change host names
+  // https://github.com/BrowserSync/browser-sync/issues/646
+  //***************************************************************************
+  // browserSync.init({
+  //   notify: false,
+  //   server: {
+  //     baseDir: 'app'
+  //   },
+  //   open: 'external',
+  //   host: 'local.fundpaas.com',
+  //   port: 3000
+  // });
 
   watch('./app/index.html', function() {
     // hot reload when changes are made to index.html
