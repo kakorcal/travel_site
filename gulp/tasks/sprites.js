@@ -6,8 +6,22 @@ svg2png = require('gulp-svg2png');
 
 // https://github.com/jkphl/gulp-svg-sprite
 var config = {
+  shape: {
+    spacing: {
+      padding: 1 // this adds padding around each pic in sprite
+    }
+  },
   mode:  {
     css: {
+      variables: {
+        replaceSvgWithPng: function(){
+          return function(sprite, render) {
+            // sprite is the dynamic filename
+            // replacing svg with png
+            return render(sprite).split('.svg').join('.png'); 
+          };
+        }
+      },
       sprite: 'sprite.svg', // remove .css from sprite filename
       render: {
         css: {

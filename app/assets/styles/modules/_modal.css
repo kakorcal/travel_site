@@ -9,7 +9,7 @@
   opacity: 0;
   /* prevents cursor from changing when modal is not open */
   visibility: hidden;
-  /* zoom out effect */
+  /* zoom out effect */ 
   transform: scale(1.2);
   transition: all .3s ease-out;
 

@@ -51,7 +51,7 @@ background-color: rgba($mainBlue, .3); this is possible now due to postcss-hexrg
       transform: translateX(0);
 
       .site-header--dark & {
-        transform: scale(.57);
+        transform: scale(.56);
       }
     }
   }

@@ -15,7 +15,7 @@ class Modal {
     this.closeModalButton.click(this.closeModal.bind(this));
     // pushes the escape key
     $(document).keyup(this.keyPressHandler.bind(this));
-  }
+  } 
 
   keyPressHandler(e) {
     if(e.keyCode === 27) {
