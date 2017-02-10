@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class MobileMenu {
+class MobileMenu {   
   constructor() {
     // this function runs when a new object is created with this class
     this.siteHeader = $('.site-header');

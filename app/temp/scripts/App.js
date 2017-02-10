@@ -10802,6 +10802,7 @@
 	  function StickyHeader() {
 	    _classCallCheck(this, StickyHeader);
 	
+	    this.lazyImages = (0, _jquery2.default)('.lazyload');
 	    this.siteHeader = (0, _jquery2.default)('.site-header');
 	    this.headerTriggerElement = (0, _jquery2.default)('.large-hero__title');
 	    this.createHeaderWaypoint();
@@ -10809,9 +10810,22 @@
 	    this.createPageSectionWaypoints();
 	    this.headerLinks = (0, _jquery2.default)('.primary-nav a');
 	    this.addSmoothScroll({ speed: 600 });
+	    this.refreshWaypoints();
 	  }
 	
+	  // waypoints will trigger at wrong time cause of the lazyloading, the image doesn't exist so the height is screwed up
+	  // so everytime an image loads we can refresh the waypoints
+	
+	
 	  _createClass(StickyHeader, [{
+	    key: 'refreshWaypoints',
+	    value: function refreshWaypoints() {
+	      this.lazyImages.on('load', function () {
+	        // Waypoint is in the global scope cause that's how the author created it so we don't have to do this on RevealOnScroll.js
+	        Waypoint.refreshAll();
+	      });
+	    }
+	  }, {
 	    key: 'addSmoothScroll',
 	    value: function addSmoothScroll() {
 	      this.headerLinks.smoothScroll();

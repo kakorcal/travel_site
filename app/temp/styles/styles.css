@@ -644,7 +644,7 @@ a {
 
 @media (min-width: 1010px) {
 
-  .page-section--testimonials {
+  .page-section--testimonials.lazyloaded {
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
     background-size: cover;
   }
@@ -1334,6 +1334,10 @@ background-color: rgba($mainBlue, .3); this is possible now due to postcss-hexrg
   z-index: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.example {
+
 }
 
 .primary-nav {

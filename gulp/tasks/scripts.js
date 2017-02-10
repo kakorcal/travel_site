@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 webpack = require('webpack-stream'),
 config = require('../../webpack.config');
 
-gulp.task('scripts', function(done){
+gulp.task('scripts', ['modernizr'], function(done){
   return gulp.src('./app/assets/scripts/App.js')
     .pipe(webpack(config))
     .on('error', function(error){
