@@ -37,6 +37,10 @@ gulp.task('watch', function() {
     gulp.start('cssInject');
   });
 
+  watch('./app/assets/scripts/**/*.js', function(){
+    gulp.start('scriptsRefresh');
+  });
+
 });
 
 // when we change any css file, this task is invoked
@@ -45,4 +49,8 @@ gulp.task('cssInject', ['styles'], function(){
   // this prevents having to do a refresh
   return gulp.src('./app/temp/styles/styles.css')
       .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function(){
+  browserSync.reload();
 });
