@@ -4,6 +4,7 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "jquery": "^2.2.4",
+    "jquery-smooth-scroll": "^2.1.2",
     "normalize.css": "^4.1.1",
     "waypoints": "^4.0.1"
   },
