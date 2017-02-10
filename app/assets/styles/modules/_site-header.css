@@ -112,7 +112,7 @@ background-color: rgba($mainBlue, .3); this is possible now due to postcss-hexrg
     &::after {
       transform: rotate(-45deg) scaleX(1.25) translateY(1px);
     }
-  }
+  } 
 
   &__menu-content {
     opacity: 0;
